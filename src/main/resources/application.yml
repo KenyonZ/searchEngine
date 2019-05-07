@@ -1,0 +1,25 @@
+Server:
+  port: 10021
+Spring:
+  Datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/searchengine?characterEncoding=UTF-8
+    username: root
+    password: root
+    #验证连接的有效性
+    test-while-idle: true
+#    获取连接时验证
+    test-on-borrow: true
+    validation-query: SELECT 1 FROM DUAL
+#    回收间隔时间
+    time-between-eviction-runs-millis: 300000
+#    #连接池空闲连接的有效时间 ，设置5分钟
+    min-evictable-idle-time-millis: 300000
+    initial-size: 5
+    #指定连接池中最大的活跃连接数.
+    max-active: 8
+    #指定连接池等待连接返回的最大等待时间，毫秒单位.
+    max-wait: 120000
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
