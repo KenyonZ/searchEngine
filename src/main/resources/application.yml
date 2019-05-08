@@ -23,3 +23,8 @@ Spring:
 #mybatis:
 #  configuration:
 #    map-underscore-to-camel-case: true
+  elasticsearch:
+    jest:
+      uris:
+        - http://localhost:9200  # ES服务器的地址！
+      read-timeout: 5000
